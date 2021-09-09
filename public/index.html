@@ -45,4 +45,14 @@
   <script src="js/index.js"></script>
   <script src="js//idbs.js"></script>
 </body>
+
+<script>
+  (function() {
+    if('serviceWorker' in navigator) {
+      navigator.serviceWorker.register("./service-worker.js")
+      .then(() => console.log("Service Worker registered successfully."))
+      .catch(error => consle.log("Service Worker registration failed."))
+    }
+  })();
+</script>
 </html>
